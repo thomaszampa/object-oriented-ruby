@@ -67,3 +67,7 @@ item3 = Store_Item.new("shirt", "brown", 25, false)
 item1.print_info
 item2.print_info
 item3.print_info
+
+puts item1.stock
+item1.stock = false
+puts item1.stock
