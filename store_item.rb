@@ -6,21 +6,64 @@ item1 = {
   :title => "socks",
   :color => "green",
   :price => 15,
-  :in-stock => true
+  :stock => true
 }
 
 item2 = {
   :title => "underwear",
   :color => "blue",
   :price => 10,
-  :in-stock => false
+  :stock => false
 }
 
 item3 = {
   title: "shirt",
   color: "brown",
   price: 25,
-  in-stock: false
+  stock: false
 }
 
-put 
+class Store_Item
+  attr_reader :title, :color, :price, :stock
+  attr_writer :stock
+
+  def initialize (input_title, input_color, input_price, input_stock)
+    @title = input_title
+    @color = input_color
+    @price = input_price
+    @stock = input_stock
+  end
+
+  # def title
+  #   @title
+  # end
+
+  # def color
+  #   @color
+  # end
+
+  # def price
+  #   @price
+  # end
+
+  # def instock
+  #   @stock
+  # end
+
+  # def instock=(input_new_stock_status)
+  #   @stock = input_new_stock_status
+  # end
+
+  def print_info
+    puts "You have selected #{color} #{title} that costs #{price} dollars."
+  end
+
+end
+
+item1 = Store_Item.new("socks", "green", 15, true)
+item2 = Store_Item.new("underwear", "blue", 10, false)
+item3 = Store_Item.new("shirt", "brown", 25, false)
+
+item1.print_info
+item2.print_info
+item3.print_info
