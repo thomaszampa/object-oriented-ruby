@@ -2,4 +2,5 @@
 
 def name
   puts "Name" 
+  puts "hi"
 end

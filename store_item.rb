@@ -37,23 +37,28 @@ class Store_Item
   def print_info
     puts "You have selected #{color} #{title} that costs #{price} dollars."
   end
-
 end
 
 class Clothes < Store_Item
-  def 
+  def initialize (input_system)
     super
-    @inventory_system = 'FILO'
+    @inventory_system = input_system
+  end
+
+  def input_system
+    @inventory_system
   end
 end
 
 item1 = Store_Item.new("socks", "green", 15, true)
 item2 = Store_Item.new("underwear", "blue", 10, false)
 item3 = Store_Item.new("shirt", "brown", 25, false)
+clothes = Clothes.new("shirt", "brown", 25, false, "FILO")
 
 item1.print_info
 item2.print_info
 item3.print_info
+clothes.input_system
 
 puts item1.stock
 item1.stock = false
