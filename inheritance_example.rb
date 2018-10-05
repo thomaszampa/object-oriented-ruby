@@ -18,12 +18,26 @@ class Transportation
 end
 
 class Car < Transportation
+  def initialize
+    super
+    @fuel = 'gas'
+    @make = 'Volkswagon'
+    @model = 'Jetta'
+  end
+    
   def honk_horn
     puts "Beeeeeeep!"
   end
 end
 
 class Bike < Transportation
+  def initialize
+    super
+    @speed = 'single'
+    @type = 'road'
+    @weight = '12lbs'
+  end
+
   def ring_bell
     puts "Ring ring!"
   end

@@ -2,26 +2,26 @@
 # C.2 - Represent 3 items using hashes. Each hash should have the same keys with different values.
 # C.3 - Be sure to use symbols for the keys. Try creating hashes using both types of hash symbol syntaxes. (Ruby syntax {:a => 123} vs. “JavaScript” syntax {a: 123}).
 
-item1 = {
-  :title => "socks",
-  :color => "green",
-  :price => 15,
-  :stock => true
-}
+# item1 = {
+#   :title => "socks",
+#   :color => "green",
+#   :price => 15,
+#   :stock => true
+# }
 
-item2 = {
-  :title => "underwear",
-  :color => "blue",
-  :price => 10,
-  :stock => false
-}
+# item2 = {
+#   :title => "underwear",
+#   :color => "blue",
+#   :price => 10,
+#   :stock => false
+# }
 
-item3 = {
-  title: "shirt",
-  color: "brown",
-  price: 25,
-  stock: false
-}
+# item3 = {
+#   title: "shirt",
+#   color: "brown",
+#   price: 25,
+#   stock: false
+# }
 
 class Store_Item
   attr_reader :title, :color, :price, :stock
@@ -34,30 +34,17 @@ class Store_Item
     @stock = input_stock
   end
 
-  # def title
-  #   @title
-  # end
-
-  # def color
-  #   @color
-  # end
-
-  # def price
-  #   @price
-  # end
-
-  # def instock
-  #   @stock
-  # end
-
-  # def instock=(input_new_stock_status)
-  #   @stock = input_new_stock_status
-  # end
-
   def print_info
     puts "You have selected #{color} #{title} that costs #{price} dollars."
   end
 
+end
+
+class Clothes < Store_Item
+  def 
+    super
+    @inventory_system = 'FILO'
+  end
 end
 
 item1 = Store_Item.new("socks", "green", 15, true)
