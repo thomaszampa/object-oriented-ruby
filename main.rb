@@ -3,7 +3,7 @@ require "./clothes.rb"
 item1 = StoreFront::Store_Item.new("socks", "green", 15, true)
 item2 = StoreFront::Store_Item.new("underwear", "blue", 10, false)
 item3 = StoreFront::Store_Item.new("shirt", "brown", 25, false)
-clothes = Clothes.new("shirt", "brown", 25, false, "FILO")
+clothes = StoreFront::Clothes.new("shirt", "brown", 25, false, "FILO")
 
 item1.print_info
 item2.print_info
