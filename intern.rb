@@ -1,3 +1,13 @@
+# Manager.rb w/ Intern
+
+module EmailReportable
+  def send_report
+    puts "Sending email..."
+    # use email sending library...
+    puts "Email sent!"
+  end
+end
+
 class Employee
   attr_reader :first_name, :last_name, :active
   attr_writer :active
@@ -18,21 +28,12 @@ class Employee
   end
 end
 
-employee1 = Employee.new({first_name: "Majora", last_name: "Carter", salary: 80000, active: true})
-employee2 = Employee.new(first_name: "Danilo", last_name: "Campos", salary: 70000, active: true)
-employee1.print_info
-employee2.print_info
-
 class Manager < Employee
+  include EmailReportable
+
   def initialize(input_options)
     super
     @employees = input_options[:employees]
-  end
-
-  def send_report
-    puts "Sending email..."
-    # use email sending library...
-    puts "Email sent!"
   end
 
   def give_all_raises
@@ -48,6 +49,16 @@ class Manager < Employee
   end
 end
 
+class Intern < Employee
+  include EmailReportable
+end
+
+employee1 = Employee.new({first_name: "Majora", last_name: "Carter", salary: 80000, active: true})
+employee2 = Employee.new(first_name: "Danilo", last_name: "Campos", salary: 70000, active: true)
+
+# employee1.print_info
+# employee2.print_info
+
 manager = Manager.new(
   first_name: "Saron", 
   last_name: "Yitbarek", 
@@ -55,10 +66,17 @@ manager = Manager.new(
   true, employees: [employee1, employee2]
   )
 
-manager.print_info
-manager.send_report 
-manager.give_all_raises
-employee1.print_info
-employee2.print_info
-manager.fire_all_employees
-p manager
+# manager.print_info
+# manager.send_report 
+# manager.give_all_raises
+# employee1.print_info
+# employee2.print_info
+# manager.fire_all_employees
+# p manager
+
+intern = Intern.new(
+  first_name: "Adrienne",
+  last_name: "Lowe",
+  salary: 50000,
+  active: true
+  )
