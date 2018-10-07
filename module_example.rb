@@ -1,4 +1,4 @@
-class Transportation
+module TransportationAbilities 
   def initialize
     @speed = 0
     @direction = 'north'
@@ -17,7 +17,9 @@ class Transportation
   end
 end
 
-class Car < Transportation
+class Car
+  include TransportationAbilities
+
   def initialize
     super
     @fuel = 'gas'
@@ -30,7 +32,9 @@ class Car < Transportation
   end
 end
 
-class Bike < Transportation
+class Bike
+  include TransportationAbilities
+
   def initialize
     super
     @speed = 'single'
