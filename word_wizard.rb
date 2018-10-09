@@ -1,6 +1,7 @@
 require "http"
 
 while true 
+
   system "clear"
 
   puts "Hail and well met user! Please enter a word and I, the almighty word wizard, will return the definition. Additionally, I will provide examples and pronunciation. Your welcome."
@@ -36,4 +37,5 @@ while true
     puts "Farewell!"
     break
   end
+  
 end
