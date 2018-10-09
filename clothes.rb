@@ -17,4 +17,5 @@ module StoreFront
       @inventory_system
     end
   end
+
 end
