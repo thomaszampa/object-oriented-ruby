@@ -13,3 +13,5 @@ clothes.input_system
 puts item1.stock
 item1.stock = false
 puts item1.stock
+
+puts
