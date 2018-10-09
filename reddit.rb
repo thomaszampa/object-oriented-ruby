@@ -13,4 +13,5 @@ data_subreddit = response_subreddit.parse["data"]["children"].length.times do
   data_subreddit = response_subreddit.parse["data"]["children"][index]["data"]["title"]
   index += 1
   pp data_subreddit
+
 end
