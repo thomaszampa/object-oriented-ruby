@@ -1,4 +1,5 @@
 module StoreFront
+
   class Store_Item
     attr_reader :title, :color, :price, :stock
     attr_writer :stock
@@ -14,4 +15,5 @@ module StoreFront
       puts "You have selected #{color} #{title} that costs #{price} dollars."
     end
   end
+
 end
