@@ -40,4 +40,5 @@ sam_recipes.each do |x|
       end
     end
   end
+
 end 
